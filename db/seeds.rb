@@ -8,8 +8,7 @@
 #---
 # encoding: utf-8
 Product.delete_all
-product = Product.create(title: 'Programming Ruby 3.3 (5th Edition)',
-  decription:
+product = Product.create(title: 'Programming Ruby 3.3 (5th Edition)', description:
     %(<p>
       <em>The Pragmatic Programmers' Guide</em>
       Ruby is one of the most important programming languages in use for web
@@ -25,8 +24,7 @@ product = Product.create(title: 'Programming Ruby 3.3 (5th Edition)',
 
 product.save!
 # . . .
-product = Product.create(title: 'Rails Scales!',
-  decription:
+product = Product.create(title: 'Rails Scales!', description:
     %(<p>
       <em>Practical Techniques for Performance and Growth</em>
       Rails doesn’t scale. So say the naysayers. They’re wrong. Ruby on Rails
@@ -45,8 +43,7 @@ product = Product.create(title: 'Rails Scales!',
   product.save!
 # . . .
 
-product = Product.create(title: 'Modern Front-End Development for Rails, Second Edition',
-  decription:
+product = Product.create(title: 'Modern Front-End Development for Rails, Second Edition', description:
     %(<p>
       <em>Hotwire, Stimulus, Turbo, and React</em>
       Improve the user experience for your Rails app with rich, engaging

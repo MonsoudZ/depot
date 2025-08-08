@@ -5,7 +5,7 @@ class Product < ApplicationRecord
   has_one_attached :image
   after_commit -> { broadcast_refresh_later_to "products"}
 
-  validates :title, :decription, presence: true
+  validates :title, :description, presence: true
   validates :title, uniqueness: true
   validates :price, numericality: { greater_than_or_equal_to: 0.01 }
 

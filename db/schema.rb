@@ -45,17 +45,17 @@ ActiveRecord::Schema[8.0].define(version: 2025_08_05_195349) do
   end
 
   create_table "line_items", force: :cascade do |t|
-    t.integer "prouduct_id", null: false
+    t.integer "product_id", null: false
     t.integer "cart_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["cart_id"], name: "index_line_items_on_cart_id"
-    t.index ["prouduct_id"], name: "index_line_items_on_prouduct_id"
+    t.index ["product_id"], name: "index_line_items_on_product_id"
   end
 
   create_table "products", force: :cascade do |t|
     t.string "title"
-    t.text "decription"
+    t.text "description"
     t.decimal "price", precision: 8, scale: 2
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -64,5 +64,5 @@ ActiveRecord::Schema[8.0].define(version: 2025_08_05_195349) do
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
   add_foreign_key "line_items", "carts"
-  add_foreign_key "line_items", "prouducts"
+  add_foreign_key "line_items", "products"
 end
